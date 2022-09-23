@@ -9,6 +9,8 @@ const autoprefixer = require("gulp-autoprefixer");
 const cleancss = require("gulp-clean-css");
 const imagecomp = require("compress-images");
 const clean = require("gulp-clean");
+const gulp = require('gulp');
+const ghPages = require('gulp-gh-pages');
 
 function browsersync() {
   browserSync.init({
@@ -88,7 +90,8 @@ function buildcopy() {
       "app/css/**/*.gif",
       "app/js/**/*.min.js",
       "app/images/**/*",
-      "app/**/*.html"
+      "app/**/*.html",
+      "app/fonts/**/*"
     ],
     { base: "app" }
   ) 
@@ -98,6 +101,11 @@ function buildcopy() {
 function cleandist() {
   return src("dist", { allowEmpty: true }).pipe(clean());
 }
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
 
 exports.browsersync = browsersync;
 exports.scripts = scripts;
