@@ -1,0 +1,4 @@
+dist
+node_modules
+app/js/app.min.js
+app/js/jquery-ui.min.js

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/app.min.css" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navigation">
+          <a href="#table-section" class="navigation__link">Таблица</a>
+          <a href="#form-section" class="navigation__link">Форма</a>
+          <a href="#gallery-section" class="navigation__link">Галерея</a>
+        </nav>
+      </div>
+    </header>
+    <ul class="breadcrumb container">
+      <li class="breadcrumb__item">
+        <a href="#" class="breadcrumb__link">Главная</a>
+      </li>
+      <li class="breadcrumb__item">Тестовое задание</li>
+    </ul>
+    <h1 class="title">Тестовое задание</h1>
+    <section class="table-section" id="table-section">
+      <div class="container">
+        <h2 class="table-section__title">Таблица</h2>
+        <div class="table-section__content">
+          <p>Должна быть адаптивной, без дублирования информации.</p>
+        </div>
+        <table class="table-section__table table">
+          <thead class="table__head">
+            <tr>
+              <th class="table__td table__td--name">Название</th>
+              <th class="table__td">Материал</th>
+              <th class="table__td table__td--size">Размер</th>
+              <th class="table__td table__td--price">Цена</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table__tr">
+              <td class="table__td td">
+                <span class="td__head">Название</span>
+                <span class="td__data">Стеновой паркет</span>
+              </td>
+              <td class="table__td td">
+                <span class="td__head">Материал</span>
+                <span class="td__data">Ольха</span>
+              </td>
+              <td class="table__td td">
+                <span class="td__head">Размер</span>
+                <span class="td__data">13 × 78 × 300 мм</span>
+              </td>
+              <td class="table__td td table__td--price">
+                <span class="td__head">Цена</span>
+                <span class="td__data">52 ₽</span>
+                <button class="table__btn">В корзину</button>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="table__td td">
+                <span class="td__head">Название</span>
+                <span class="td__data">Стеновой паркет</span>
+              </td>
+              <td class="table__td td">
+                <span class="td__head">Материал</span>
+                <span class="td__data">Ольха</span>
+              </td>
+              <td class="table__td td">
+                <span class="td__head">Размер</span>
+                <span class="td__data">13 × 78 × 600 мм</span>
+              </td>
+              <td class="table__td td table__td--price">
+                <span class="td__head">Цена</span>
+                <span class="td__data">112 ₽</span>
+                <button class="table__btn">В корзину</button>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="table__td td">
+                <span class="td__head">Название</span>
+                <span class="td__data">Доска для пола, сорт А</span>
+              </td>
+              <td class="table__td td">
+                <span class="td__head">Материал</span>
+                <span class="td__data">Лиственница</span>
+              </td>
+              <td class="table__td td">
+                <span class="td__head">Размер</span>
+                <span class="td__data">27 × 134 × 2000 мм</span>
+              </td>
+              <td class="table__td td table__td--price">
+                <span class="td__head">Цена</span>
+                <span class="td__data">1062 ₽</span>
+                <button class="table__btn">В корзину</button>
+              </td>
+            </tr>
+            <tr class="table__tr">
+              <td class="table__td td">
+                <span class="td__head">Название</span>
+                <span class="td__data">Вагонка</span>
+              </td>
+              <td class="table__td td">
+                <span class="td__head">Материал</span>
+                <span class="td__data">Термо-абаш</span>
+              </td>
+              <td class="table__td td">
+                <span class="td__head">Размер</span>
+                <span class="td__data">19 × 90 × 2000 мм</span>
+              </td>
+              <td class="table__td td table__td--price">
+                <span class="td__head">Цена</span>
+                <span class="td__data">1009 ₽</span>
+                <button class="table__btn">В корзину</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="form-section" id="form-section">
+      <div class="container">
+        <h2 class="form-section__title">Форма</h2>
+        <div class="form-section__content">
+          <p>
+            Должна иметь проверку полей: обязательное поле, формат, минимальное
+            значение. При несоответствии должна выводиться соответствующая
+            ошибка. Поле «Телефон» должен содержать маску ввода.
+          </p>
+        </div>
+        <form class="form" id="form">
+          <h3 class="form__title">Заказать проект</h3>
+          <label for="name" class="form__label form__label--name"
+            >Название</label
+          >
+          <input type="text" id="name" class="form__input form__input--name" />
+          <div class="form__flex-container">
+            <div class="form__input-wrap form__input-wrap--price">
+              <label for="form__price" class="form__label">Стоимость</label>
+              <input
+                type="text"
+                id="form__price"
+                class="form__input form__input--price form__input--number"
+              />
+              <div class="form__range-container">
+                <div class="form__range"></div>
+              </div>
+            </div>
+            <div class="form__input-wrap form__input-wrap--square">
+              <label for="form__square" class="form__label">Площадь</label>
+              <div class="form__input-inner quantity_inner">
+                <button
+                  class="bt_minus form__input-btn form__input-btn--minus"
+                ></button>
+                <input
+                  type="text"
+                  class="form__input form__input--square quantity form__input--number"
+                  value="200 м²"
+                  data-max-count="900000"
+                  id="form__square"
+                />
+                <button
+                  class="bt_plus form__input-btn form__input-btn--plus"
+                ></button>
+              </div>
+            </div>
+            <div class="form__input-wrap form__input-wrap--trim">
+              <div class="form__label">Отделка</div>
+              <label for="whitebox" class="form__checkbox-label">
+                <input
+                  type="checkbox"
+                  class="form__checkbox"
+                  id="whitebox"
+                  checked
+                />
+                <div class="form__checkbox-text">Вайтбокс</div>
+              </label>
+            </div>
+          </div>
+          <div class="form__flex-container form__flex-container--phone">
+            <div class="form__input-wrap form__input-wrap--phone">
+              <label for="phone" class="form__label">Телефон</label>
+              <input
+                type="text"
+                id="phone"
+                class="form__input form__input--phone"
+              />
+            </div>
+            <div class="form__input-wrap form__input-wrap--mail">
+              <label for="mail" class="form__label">Почта</label>
+              <input
+                type="email"
+                id="mail"
+                class="form__input form__input--mail"
+              />
+            </div>
+          </div>
+          <div class="form__input-wrap form__input-wrap--file">
+            <div class="form__label">Приложить файлы</div>
+            <label class="form__file-label">
+              <p class="form__file-text">
+                Кликните или перенесите файлы в эту область.
+              </p>
+              <p class="form__file-text">Только JPG, до 1 Мб</p>
+
+              <input
+                type="file"
+                class="form__input form__input--file"
+                accept="image/jpeg"
+                multiple
+                id="file"
+                name="file"
+              />
+            </label>
+            <ul class="files-list" id="files-list"></ul>
+            <p id="uploaded"></p>
+            <p id="result"></p>
+          </div>
+          <div class="form__flex-container form__flex-container--comf-pass">
+            <div class="form__input-wrap form__input-wrap--comfort">
+              <label for="comfort" class="form__label">Удобства</label>
+              <select id="comfort" class="form__input form__input--comfort">
+                <option selected>любые</option>
+                <option>Пункт 1</option>
+                <option>Пункт 2</option>
+                <option>Пункт 3</option>
+                <option>Пункт 1</option>
+                <option>Пункт 2</option>
+                <option>Пункт 3</option>
+                <option>Пункт 1</option>
+                <option>Пункт 2</option>
+                <option>Пункт 3</option>
+                <option>Пункт 1</option>
+                <option>Пункт 2</option>
+                <option>Пункт 3</option>
+              </select>
+            </div>
+            <div class="form__input-wrap form__input-wrap--password">
+              <label for="password" class="form__label">Пароль</label>
+              <input type="password" id="password" class="form__input" />
+              <a href="#" class="password-control"></a>
+            </div>
+          </div>
+          <div class="form__input-wrap form__input-wrap--wishes">
+            <label for="wishes" class="form__label">Пожелания</label>
+            <input
+              type="text"
+              id="wishes"
+              class="form__input form__input-wishes"
+              placeholder="введите пожелание и нажмите enter"
+            />
+          </div>
+
+          <button type="submit" class="form__button">Отправить заявку</button>
+        </form>
+      </div>
+    </section>
+    <section class="gallery-section" id="gallery-section">
+      <div class="container">
+        <h2 class="gallery-section__subtitle">Галерея</h2>
+        <div class="gallery-section__content">
+          Фильтры должны фильтровать изображения без перезагрузки. Адаптивность:
+          между реперными точками — пропорциональное масштабирование, далее
+          уменьшение кол-ва фото в строке. Пролистывание должно быть по 8 фото
+          (страницами) для дектопа, по 4 фото на мобилке. Стрелки появляются
+          только при наведении на блок с фото.
+        </div>
+      </div>
+      <div class="tabs">
+        <ul class="tabs__caption">
+          <li class="tabs__item">Бани</li>
+          <li class="tabs__item active">Сауны</li>
+          <li class="tabs__item">Хаммамы</li>
+          <li class="tabs__item">Хаммамы</li>
+        </ul>
+        <div class="tabs__content">
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+        </div>
+        <div class="tabs__content active">
+          <img class="tabs__image" src="images/image-1.jpg" />
+          <img class="tabs__image" src="images/image-2.jpg" />
+          <img class="tabs__image" src="images/image-3.jpg" />
+          <img class="tabs__image" src="images/image-4.jpg" />
+          <img class="tabs__image" src="images/image-5.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-7.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-1.jpg" />
+          <img class="tabs__image" src="images/image-2.jpg" />
+          <img class="tabs__image" src="images/image-3.jpg" />
+          <img class="tabs__image" src="images/image-4.jpg" />
+          <img class="tabs__image" src="images/image-5.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-7.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-1.jpg" />
+          <img class="tabs__image" src="images/image-2.jpg" />
+          <img class="tabs__image" src="images/image-3.jpg" />
+          <img class="tabs__image" src="images/image-4.jpg" />
+          <img class="tabs__image" src="images/image-5.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-7.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-1.jpg" />
+          <img class="tabs__image" src="images/image-2.jpg" />
+          <img class="tabs__image" src="images/image-3.jpg" />
+          <img class="tabs__image" src="images/image-4.jpg" />
+          <img class="tabs__image" src="images/image-5.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-7.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-1.jpg" />
+          <img class="tabs__image" src="images/image-2.jpg" />
+          <img class="tabs__image" src="images/image-3.jpg" />
+          <img class="tabs__image" src="images/image-4.jpg" />
+          <img class="tabs__image" src="images/image-5.jpg" />
+          <img class="tabs__image" src="images/image-6.jpg" />
+          <img class="tabs__image" src="images/image-7.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+        </div>
+        <div class="tabs__content">
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+        </div>
+        <div class="tabs__content">
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+          <img class="tabs__image" src="images/image-8.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
